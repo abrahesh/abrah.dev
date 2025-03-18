@@ -1,21 +1,26 @@
 ---
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
 ---
 
-<ul class="flex flex-row gap-x-5 pt-3">
+<ul class="flex flex-row gap-x-5 pt-6">
   <a
     href="https://www.linkedin.com/in/abrahamescalona/"
     target="_blank"
     rel="noopener"
   >
-    <LinkedInIcon class="w-6 h-6" />
+    <LinkedInIcon class="size-6" />
+  </a>
+  <a href="https://github.com/abrahesh" target="_blank" rel="noopener">
+    <GitHubIcon class="size-6" />
   </a>
   <a
-    href="https://github.com/abrahesh"
-    target="_blank"
-    rel="noopener"
+    href="javascript:void(0);"
+    onclick="navigator.clipboard.writeText('abraham@abrah.dev');"
+    class="flex flex-row gap-x-2"
   >
-    <GitHubIcon class="w-6 h-6" />
+    <MailIcon class="size-8" />
+    <span class="text-indigo-100 opacity-70 hover:opacity-100 hover:text-violet-300">abraham@abrah.dev</span>
   </a>
 </ul>

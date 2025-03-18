@@ -1,0 +1,46 @@
+---
+import TimelineItem from "./TimelineItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Julio 2022",
+    title: "1º en Fase final Interprovincial VI Concurso de Rastreadores ",
+    company: "UCLM",
+    description:
+      "Reconocimiento otorgado por la Universidad de Castilla-La Mancha por destacarse en los estudios como ganador de la Fase final Interprovincial VI Concurso de Rastreadores.",
+    link: "https://www.linkedin.com/in/abrahamescalona/details/honors/",
+  },
+  {
+    date: "Julio 2022",
+    title: "2º en III Competición Intercampus Automatización",
+    company: "UCLM",
+    description:
+      "Reconocimiento concedido por la Universidad de Castilla-La Mancha por sobresalir en los estudios como 2º finalista en la III Competición Intercampus Automatización",
+    link: "https://www.linkedin.com/in/abrahamescalona/details/honors/",
+  },
+  {
+    date: "Julio 2023",
+    title: "IBM Data Science",
+    company: "Coursera",
+    description: "Durante este Certificado Profesional, desarrollé y perfeccioné habilidades prácticas en Ciencia de Datos y Machine Learning. Comencé con una introducción a la Ciencia de Datos y su metodología, familiarizándome con diversas herramientas del sector. Aprendí Python y SQL, realicé visualización y análisis de datos, y creé modelos de Machine Learning. A lo largo del programa, completé múltiples laboratorios y ejercicios en la nube, culminando con un Proyecto Final para aplicar y demostrar mis conocimientos. Además, obtuve certificaciones con honores en Machine Learning with Python y Databases and SQL for Data Science with Python.",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/SWTVXWEBXUQS"
+  },
+  {
+    date: "Septiembre 2024 - Actualidad",
+    title: "Grado en Ingeniería, Ingeniería Informática",
+    company: "Universidad de Castilla-La Mancha",
+    description:
+      "Grado en Ingeniería, Ingeniería Informática en la Universidad de Castilla-La Mancha.",
+      link: "https://www.linkedin.com/in/abrahamescalona/details/education/"
+  }
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <TimelineItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

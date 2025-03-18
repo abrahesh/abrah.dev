@@ -1,1 +1,5 @@
 @import "tailwindcss";
+.text-shadow {
+    text-shadow: 0 4px 6px rgba(255, 165, 0, 0.8); /* Sombra debajo del texto */
+  }
+  

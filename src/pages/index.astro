@@ -1,38 +1,43 @@
 ---
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
+import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout>
-  <main>
-    <section class="w-full lg:w-[740px] mx-auto py-10">
-      <h1 class="text-white text-5xl font-bold flex flex-row pb-4">
-        Hey, soy
-        <a
-          href="https://github.com/abrahesh"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center pl-4">abrah.dev</a
-        >
-        <a
-          href="https://www.linkedin.com/in/abrahamescalona/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center pl-4"
-        >
-          <Badge>Cv</Badge>
-        </a>
-      </h1>
-      <h2 class="text-white text-2xl font-light opacity-80">
-        Desarollador web y Data Scientist. De españa. Especializado en crear
-        responisve webs
-      </h2>
-      <SocialPill/>
-
-    </section>
-  </main>
-</Layout>
+<Layout
+  title="abrah.dev - Desarollador web y Data Scientist"
+  description="Bienvenido al portfolio de Abraham Escalona Seco de Herrera. Soy un Desarollador web y Data Scientist de España, especializado en crear sitios web responsivos."
+/>
+<main>
+  <SectionContainer class="w-full lg:w-[740px] mx-auto py-10">
+    <h1 class="text-white text-5xl font-bold flex flex-row pb-4">
+      Hey, soy
+      <a
+        href="https://github.com/abrahesh"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-center items-center pl-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500
+        text-transparent bg-clip-text hover:scale-102 transition duration-300"
+        >abrah.dev</a
+      >
+      <a
+        href="https://www.linkedin.com/in/abrahamescalona/"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-center items-center pl-4"
+      >
+        <!-- <Badge>Cv</Badge> -->
+      </a>
+    </h1>
+    <h2 class="text-white text-2xl font-light opacity-80">
+      Soy estudiante de Ingeniería Informática en España, me especializo en Desarollo web y Data Scientist. 
+      Actualmente estoy trabajando en proyectoos personales y en el crecimiento continuo de mis habilidades.
+    </h2>
+    <SocialPill />
+  </SectionContainer>
+  <SectionContainer>
+    <Timeline />
+  </SectionContainer>
+</main>
