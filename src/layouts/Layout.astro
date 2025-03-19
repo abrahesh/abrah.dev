@@ -20,20 +20,24 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    
-<div class="fixed inset-0 -z-10 h-screen w-screen [background:radial-gradient(125%_80%_at_50%_10%,#000_40%,#63e_250%)]"></div>
-  </div>
-    <Header />
-    <slot />
-    <Footer />
-    <SpeedInsights />
-    <Analytics />
+    <div
+      class="fixed inset-0 -z-10 h-screen w-screen [background:radial-gradient(125%_80%_at_50%_10%,#fff_40%,#63e_400%)]
+dark:[background:radial-gradient(125%_80%_at_50%_10%,#000_40%,#63e_250%)]"
+    >
+    </div>
   </body>
+  <Header />
+  <slot />
+  <Footer />
+  <SpeedInsights />
+  <Analytics />
 </html>
+
 <style is:global>
   :root {
     color-scheme: light dark;
   }
+  
   html {
     font-family: "Onest Variable", sans-serif;
     scroll-behavior: smooth;
@@ -49,4 +53,5 @@ const { title, description } = Astro.props;
       scroll-behavior: auto;
     }
   }
+  
 </style>
