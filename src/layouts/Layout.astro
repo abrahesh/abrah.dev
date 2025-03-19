@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 import "@fontsource-variable/onest";
+import Footer from "../components/Footer.astro";
 
 const { title, description } = Astro.props;
 ---
@@ -10,7 +11,7 @@ const { title, description } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description}/>
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -23,6 +24,8 @@ const { title, description } = Astro.props;
     </div>
     <Header />
     <slot />
+    <Footer >
+    </Footer>
   </body>
 </html>
 <style is:global>
@@ -31,11 +34,17 @@ const { title, description } = Astro.props;
   }
   html {
     font-family: "Onest Variable", sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
     background: #0b0b0e;
     display: flex;
     flex-direction: column;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      scroll-behavior: auto;
+    }
   }
 </style>
