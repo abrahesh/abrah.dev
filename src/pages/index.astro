@@ -4,6 +4,9 @@ import SocialPill from "../components/SocialPill.astro";
 import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import LayersIcon from "../components/icons/LayersIcon.astro";
+import Projects from "../components/Projects.astro";
+import BookIcon from "../components/icons/BookIcon.astro";
 ---
 
 <Layout
@@ -11,7 +14,7 @@ import SectionContainer from "../components/SectionContainer.astro";
   description="Soy Abraham Escalona, Desarrollador Web y Data Scientist en España. Experto en React, Python, Astro y análisis de datos gracias a mi certificación con IBM Data Science. Descubre mis proyectos."
 >
   <main class="px-4 sm:px-6 lg:px-0">
-    <SectionContainer class="w-full lg:w-[740px] mx-auto py-10">
+    <SectionContainer class="w-full lg:w-[740px] mx-auto py-15">
       <h1 class=" text-4xl lg:text-5xl font-bold flex flex-row pb-4">
         Hey, soy
         <a
@@ -31,16 +34,28 @@ import SectionContainer from "../components/SectionContainer.astro";
           <!-- <Badge>Cv</Badge> -->
         </a>
       </h1>
-      <h2 class="text-2xl font-light opacity-80">
+      <h2 class="text-3xl font-light opacity-80">
         Soy estudiante de Ingeniería Informática en España, me especializo en
-        Desarollo web y Data Scientist. Actualmente estoy trabajando en
+        Desarrollo web y Data Scientist. Actualmente estoy trabajando en
         proyectos personales y en el crecimiento continuo de mis habilidades.
       </h2>
       <SocialPill />
     </SectionContainer>
-    <SectionContainer id="experience" class="w-full lg:w-[840px] mx-auto py-10">
-      <h2 class="text-2xl font-semibold pb-8">Recorrido Academico</h2>
+    <SectionContainer id="experience" class="w-full lg:w-[840px] mx-auto py-15">
+      <h2 class="text-3xl font-semibold pb-8 gap-x-2 flex items-center">
+      <BookIcon class="size-7" />
+      Recorrido académico
+      </h2>
       <Timeline />
+      
+    </SectionContainer>
+    <SectionContainer id="projects" class="w-full lg:w-[840px] mx-auto py-15">
+      <h2 class="text-3xl font-semibold pb-8 gap-x-2 flex items-center">
+        <LayersIcon class="size-7"/>
+        Proyectos
+      </h2>
+      <Projects />
+
     </SectionContainer>
   </main>
 </Layout>
