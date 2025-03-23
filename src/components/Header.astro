@@ -1,41 +1,76 @@
-<header
-  class="flex items-center scale-90 justify-center sm:justify-between
-px-5 pt-12 sm:py-5 w-full xl:w-[1120px] mx-auto"
->
-  <a href="https://www.github.com/abrahesh" target="_blank">
-    <img
-      class="rounded-full w-12 h-12 hidden sm:block"
-      src="https://avatars.githubusercontent.com/u/108555670?v=4"
-      alt="abrah photo"
-    />
-  </a>
-  <nav>
-    <ul class="flex flex-row gap-x-10">
-      <li>
-        <a
-          class="dark:hover:text-violet-300 hover:text-violet-900 transition-colors duration-100"
-          href="#">Inicio</a
-        >
-      </li>
+---
+import ThemeToggle from "./ThemeToggle.astro"
 
-      <li>
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "#",
+  },
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "#experience",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "#projects",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "#contact",
+  },
+]
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+    {
+      navItems.map((link) => (
         <a
-          class="dark:hover:text-violet-300 hover:text-violet-900 transition-colors duration-100"
-          href="#experience">Experiencia</a
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          aria-label={link.label}
+          href={link.url}
         >
-      </li>
-      <li>
-        <a
-          class="dark:hover:text-violet-300 hover:text-violet-900 transition-colors duration-100"
-          href="#projects">Proyectos</a
-        >
-      </li>
-      <li>
-        <a
-          class="dark:hover:text-violet-300 hover:text-violet-900 transition-colors duration-100"
-          href="#contact">Contacto</a
-        >
-      </li>
-    </ul>
+          {link.title}
+        </a>
+        
+      ))
+    }
+    <ThemeToggle />
   </nav>
 </header>
+
+
+<style>
+  nav {
+    animation: nav-shadow 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  nav {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .dark nav {
+    background-color: rgba(31, 41, 55, 0.9);
+  }
+
+  @keyframes nav-shadow {
+    0% {
+      background-color: rgba(255, 255, 255, 0);
+      box-shadow: none;
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+  }
+</style>

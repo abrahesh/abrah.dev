@@ -10,21 +10,21 @@ import MailIcon from "../components/icons/MailIcon.astro";
     target="_blank"
     rel="noopener"
   >
-    <LinkedInIcon class="size-6" />
+    <LinkedInIcon class="size-8" />
   </a>
   <a href="https://github.com/abrahesh" target="_blank" rel="noopener">
-    <GitHubIcon class="size-6" />
+    <GitHubIcon class="size-8" />
   </a>
   <a
     href="javascript:void(0);"
     onclick="navigator.clipboard.writeText('abraham@abrah.dev');"
     class="flex flex-row gap-x-2"
   >
-    <MailIcon class="size-8" />
     <span
-      class="dark:text-indigo-100opacity-70 font-extralight hover:opacity-100 dark:hover:text-violet-300 hover:text-violet-900 transition-colors duration-100"
+      class="flex gap-2-x items-center font-extralight dark:text-indigo-100opacity-70 hover:opacity-100 dark:hover:text-violet-300 hover:text-violet-900 transition-colors duration-100"
     >
-      abraham@abrah.dev
+      <MailIcon class="size-8" />
+      <div class="pl-4">abraham@abrah.dev</div>
     </span>
   </a>
 </ul>
